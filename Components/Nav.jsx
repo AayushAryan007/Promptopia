@@ -13,7 +13,9 @@ const Nav = () => {
   useEffect(() => {
     const setProviders = async () => {
       const response = await getProviders();
+      setProviders(response);
     };
+    setProviders();
   }, []);
 
   return (
@@ -52,7 +54,10 @@ const Nav = () => {
             </Link>
           </div>
         ) : (
-          <></>
+          <>
+            {providers &&
+              Object.values(providers).map((provider) => <button></button>)}
+          </>
         )}
       </div>
     </nav>
