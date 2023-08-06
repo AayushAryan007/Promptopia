@@ -70,7 +70,7 @@ const Nav = () => {
         )}
       </div>
 
-      {/* ======Mobile Navogation=========*/}
+      {/* ======Mobile Navigation=========*/}
     </nav>
   );
 };
