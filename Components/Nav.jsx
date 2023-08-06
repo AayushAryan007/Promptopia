@@ -30,7 +30,7 @@ const Nav = () => {
         />
         <p className="logo_text">Promptopia</p>
       </Link>
-      {/* ======Mobile Navogation=========*/}
+
       <div className="sm:flex hidden">
         {isUserLoggedIn ? (
           <div className="flex gap-3 md:gap-5">
@@ -56,10 +56,21 @@ const Nav = () => {
         ) : (
           <>
             {providers &&
-              Object.values(providers).map((provider) => <button></button>)}
+              Object.values(providers).map((provider) => (
+                <button
+                  type="button"
+                  key={provider.name}
+                  onClick={() => signIn(provider.id)}
+                  className="black_btn"
+                >
+                  Sign In
+                </button>
+              ))}
           </>
         )}
       </div>
+
+      {/* ======Mobile Navogation=========*/}
     </nav>
   );
 };
