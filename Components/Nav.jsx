@@ -17,7 +17,9 @@ const Nav = () => {
           height={30}
           className="object-contain"
         />
+        <p className="logo_text">Promptopia</p>
       </Link>
+      {/* ======Mobile Navogation=========*/}
     </nav>
   );
 };
