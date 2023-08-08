@@ -15,6 +15,7 @@ const Nav = () => {
   useEffect(() => {
     const setUpProviders = async () => {
       const response = await getProviders();
+
       setProviders(response);
     };
     setUpProviders();
@@ -47,7 +48,8 @@ const Nav = () => {
 
             <Link href="/profile">
               <Image
-                src="/assets/images/user.svg"
+                src={session?.user.image}
+                // src="/assets/images/user.svg"
                 width={37}
                 height={37}
                 className="rounded-full"
@@ -78,7 +80,8 @@ const Nav = () => {
         {session?.user ? (
           <div className="flex">
             <Image
-              src="/assets/images/user.svg"
+              src={session?.user.image}
+              // src="/assets/images/user.svg"
               width={37}
               height={37}
               className="rounded-full"
