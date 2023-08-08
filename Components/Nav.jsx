@@ -13,11 +13,11 @@ const Nav = () => {
   const [toggleDropdown, setToggleDropdown] = useState(false);
 
   useEffect(() => {
-    const setProviders = async () => {
+    const setUpProviders = async () => {
       const response = await getProviders();
       setProviders(response);
     };
-    setProviders();
+    setUpProviders();
   }, []);
 
   return (
@@ -32,8 +32,8 @@ const Nav = () => {
         />
         <p className="logo_text">Promptopia</p>
       </Link>
-      {alert(session?.user)}
-
+      {/* {alert(session?.user)} */}
+      {/* ====desktop navigation===== */}
       <div className="sm:flex hidden">
         {session?.user ? (
           <div className="flex gap-3 md:gap-5">
