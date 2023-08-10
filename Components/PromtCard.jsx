@@ -5,4 +5,3 @@ const PromtCard = () => {
 };
 
 export default PromtCard;
-///////////////
