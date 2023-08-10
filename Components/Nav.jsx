@@ -87,6 +87,7 @@ const Nav = () => {
               className="rounded-full"
               alt="profile"
               // onClick={() => setToggleDropdown(!toggleDropdown)}
+              //////////
               //never directly change previour react state might cause unexpected behaviour
               onClick={() => setToggleDropdown((prev) => !prev)}
             />
